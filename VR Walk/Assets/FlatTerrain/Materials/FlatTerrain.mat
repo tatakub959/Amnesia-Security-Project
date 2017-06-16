@@ -135,7 +135,7 @@ Material:
       second: 0.02
     - first:
         name: _RimPower
-      second: 3.36
+      second: 5.56
     - first:
         name: _SrcBlend
       second: 1
