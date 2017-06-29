@@ -7,6 +7,7 @@ TagManager:
   - Player
   - Waypoint
   - Obt
+  - Label
   layers:
   - Default
   - TransparentFX
