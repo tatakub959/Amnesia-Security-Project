@@ -8,7 +8,7 @@ public class InteractiveObj : MonoBehaviour {
     public bool InteractiveObject = true;
     public float distance = 5;
     public float maxGazeTime = 1.5f;
-    public float outLineWidth = 0.1f;
+    public float outLineWidth = 1f;
     public float outLineGrowSpeed = 2f;
 
     private Collider myCollider;

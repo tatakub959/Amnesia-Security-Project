@@ -14,9 +14,11 @@ public class PickUpItems : MonoBehaviour
 
     private Transform vrCam;
     private Transform handMountingPosition;
-    private int count = 0;
+    private int count_item1 = 0;
+    private int count_item2 = 0;
+    private int count_item3 = 0;
     //private GameObject changeSprite;
-    
+
     void Start()
     {
         vrCam = Camera.main.transform;
@@ -28,18 +30,42 @@ public class PickUpItems : MonoBehaviour
     {
         transform.parent = handMountingPosition;
         gameObject.SetActive(false);
-    
-            if (Items[count].GetComponent<InventorySlot>().SpriteIsChanged == false)
+
+        if (Items[0].GetComponent<InventorySlot>().SpriteOneIsChanged == false && count_item1 == 0 && count_item2 == 0 && count_item3 == 0)
             {
-                Items[count].GetComponent<InventorySlot>().SetItem(objectRefrence.objectImage, objectRefrence.objectName);
-            }
-            else
-            {
-                Items[count + 1].GetComponent<InventorySlot>().SetItem(objectRefrence.objectImage, objectRefrence.objectName);
-            }
-        
+                Items[0].GetComponent<InventorySlot>().SetItem(objectRefrence.objectImage, objectRefrence.objectName);
+                Items[0].GetComponent<InventorySlot>().SpriteOneIsChanged = true;
+                count_item1++;
+
+                Debug.Log("count_item1: " + count_item1);
+                Debug.Log("count_item2: " + count_item2);
+                Debug.Log("count_item3: " + count_item3);
+        }
 
 
+
+        if (Items[1].GetComponent<InventorySlot>().SpriteTwoIsChanged == false && count_item1 == 0 && count_item2 == 0 && count_item3 == 0)
+            {
+                Items[1].GetComponent<InventorySlot>().SetItem(objectRefrence.objectImage, objectRefrence.objectName);
+                Items[1].GetComponent<InventorySlot>().SpriteTwoIsChanged = true;
+                count_item2++;
+
+                Debug.Log("count_item1: " + count_item1);
+                Debug.Log("count_item2: " + count_item2);
+                Debug.Log("count_item3: " + count_item3);
+        }
+
+        if (Items[2].GetComponent<InventorySlot>().SpriteThreeIsChanged == false && count_item1 == 0 && count_item2 == 0 && count_item3 == 0)
+            {
+                Items[2].GetComponent<InventorySlot>().SetItem(objectRefrence.objectImage, objectRefrence.objectName);
+                Items[2].GetComponent<InventorySlot>().SpriteThreeIsChanged = true;
+                count_item3++;
+
+                Debug.Log("count_item1: " + count_item1);
+                Debug.Log("count_item2: " + count_item2);
+                Debug.Log("count_item3: " + count_item3);
+        }
+          
     }
 
     /*

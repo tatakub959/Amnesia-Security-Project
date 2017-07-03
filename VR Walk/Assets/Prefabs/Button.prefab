@@ -207,7 +207,7 @@ MonoBehaviour:
   InSideButton_Size: {x: 30, y: 0.5, z: 30}
   progressImage: {fileID: 114067902701082828}
   isEntered: 0
-  GazeActivationTime: 3
+  GazeActivationTime: 1.5
 --- !u!222 &222445922985589848
 CanvasRenderer:
   m_ObjectHideFlags: 1

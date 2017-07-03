@@ -16,7 +16,7 @@ public class ButtonHit : MonoBehaviour {
     private float TimeStart;
     private float TimeTeleport = 3.5f;
     private bool isTeleported;
-
+    private string textCheck;
 
     public Vector3 Positon = new Vector3(-41f, 62.75f, -131f);
     public Vector3 Rotation = new Vector3(0f, 102f, 0f);
@@ -25,17 +25,22 @@ public class ButtonHit : MonoBehaviour {
     {
         isTeleported = false;
         IPport.GetComponent<Canvas>().enabled = false;
-        IPport.SetActive(false);
+        //IPport.SetActive(false);
+        
+        
     }
 
     public void CheckIPsource()
     {
-        if(AnswerButton.GetComponentInChildren<Text>().text == "Kingdom A")
+        textCheck = AnswerButton.GetComponentInChildren<Text>().text;
+        if (textCheck == "Kingdom A" || textCheck == "Kingdom B")
         {
 
             IPsource.SetActive(false);
-            IPport.SetActive(true);
+           
             IPport.GetComponent<Canvas>().enabled = true;
+            IPport.SetActive(false);
+            IPport.SetActive(true);
         }
         else
         {

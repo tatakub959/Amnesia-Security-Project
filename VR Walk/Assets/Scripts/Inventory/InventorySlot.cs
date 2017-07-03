@@ -6,14 +6,21 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour {
     public Image itemImage;
     public Text slotText;
-    public bool SpriteIsChanged;
+    //public bool SpriteIsChanged;
+    public bool SpriteOneIsChanged;
+    public bool SpriteTwoIsChanged;
+    public bool SpriteThreeIsChanged;
+    public int check = 0;
     public float TimeToHide = 2.5f;
 
     // Use this for initialization
     void Start () {
         //slotText = GetComponentInChildren<Text>();
         SetItem(null, null);
-        SpriteIsChanged = false;
+       // SpriteIsChanged = false;
+        SpriteOneIsChanged = false;
+        SpriteTwoIsChanged = false;
+        SpriteThreeIsChanged = false;
         gameObject.SetActive(false);
     }
 
@@ -30,7 +37,15 @@ public class InventorySlot : MonoBehaviour {
 
         slotText.text = ItemName;
         itemImage.sprite = image;
-        SpriteIsChanged = true;
+        //SpriteIsChanged = true;
+        /*
+        if (check == 0) SpriteOneIsChanged = true;
+        
+        if (check == 1) SpriteTwoIsChanged = true;
+
+        if (check >= 2) SpriteThreeIsChanged = true;
+        */
+
         /**
         if (image != null)
         {
