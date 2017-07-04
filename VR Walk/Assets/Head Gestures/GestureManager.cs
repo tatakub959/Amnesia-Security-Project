@@ -150,16 +150,17 @@ public class GestureManager : MonoBehaviour
         }
 
     }
-
+    
     void Awake()
     {
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
+
         if (_instance == null)
             _instance = this;
         else
             Destroy(this);
     }
-
+    
     void FixedUpdate()
     {
         if(_yes.CheckGesture(_cameraToMeasure.transform.rotation.x, _deltaThreshold, _timeThreshold, _gestureAmountThreshold))

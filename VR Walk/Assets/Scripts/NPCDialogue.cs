@@ -22,7 +22,7 @@ public class NPCDialogue : MonoBehaviour {
         TimeFirstText -= Time.deltaTime;
         if (TimeFirstText <= 0) textCanvas.text = "Are you from kingdom A?";
 
-        if (Nod == true && shake == false && Count_Yes >= 0)
+        if (Nod == true && shake == false && Count_Yes >= 0 )
         {
             textCanvas.text = "Great! ";
             
@@ -39,9 +39,9 @@ public class NPCDialogue : MonoBehaviour {
 
         }
 
-        else if (Nod == false && shake == true && Count_No >= 0 )
+        else if (Nod == false && shake == true && Count_No == 0 )
         {
-            textCanvas.color = Color.red;
+            //textCanvas.color = Color.red;
             textCanvas.text = "GET LOST! ";
             //gameObject.GetComponent<Canvas>().enabled = false;
         }
@@ -52,7 +52,7 @@ public class NPCDialogue : MonoBehaviour {
     {
         Nod = true;
         shake = false;
-        Debug.Log("NODDDDDDDDDDDDDDDDD: " + Count_Yes);
+        Debug.Log("NOD: " + Count_Yes);
         Count_Yes++;
     }
 
@@ -60,7 +60,7 @@ public class NPCDialogue : MonoBehaviour {
     {
         shake = true;
         Nod = false;
-        Debug.Log("SHAKEEEEEEEEEEEEE: " + Count_No);
+        Debug.Log("SHAKE: " + Count_No);
         Count_No++;
     }
 

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 5bb8d71173768f34496e9b773a7e3e2a
+timeCreated: 1499135568
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 100
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Monster oF South St
+  fontNames:
+  - Monster oF South St
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
