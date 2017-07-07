@@ -10,6 +10,8 @@ public class QuitGame : MonoBehaviour {
     public Image progressImage;
     private float timeElapsed = 0;
     public GameObject StartButton;
+    public GameObject shakeIcon;
+    
 
     public void QuitingGame()
     {
@@ -19,6 +21,8 @@ public class QuitGame : MonoBehaviour {
         //quitText.color = Color.red;
         quitText.color = new Color(255/255 , 102/255, 102/255);
         StartButton.SetActive(false);
+        shakeIcon.SetActive(false);
+    
     }
     public void Update()
     {

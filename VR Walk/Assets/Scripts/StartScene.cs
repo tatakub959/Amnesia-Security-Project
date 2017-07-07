@@ -16,6 +16,9 @@ public class StartScene : MonoBehaviour {
     public GameObject quitButton;
     public Camera cam;
 
+    public GameObject nodIcon;
+
+
 
     // Use this for initialization
     void Start () {
@@ -41,7 +44,7 @@ public class StartScene : MonoBehaviour {
             if (timeElapsed >= TimetoStart)
             {
                 timeElapsed = 0;
-                SceneManager.LoadScene("Main Backup");
+                SceneManager.LoadScene("HowToPlay");
                 progressImage.fillAmount = 0;
                 isHit = false;
             }
@@ -53,8 +56,9 @@ public class StartScene : MonoBehaviour {
     {
         isHit = true;
         HeadManager.SetActive(false);
-        Play.color = new Color(178/255, 255/255 , 102/255);
+        Play.color = new Color(204/255, 255/255 , 153/255);
         quitButton.SetActive(false);
-       
+        nodIcon.SetActive(false);
+
     }
 }

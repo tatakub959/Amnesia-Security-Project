@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class NPCDialogue : MonoBehaviour {
     public Text textCanvas;
-    public float TimeFirstText = 3f;
-    public float TimeSecText = 3f;
+    public float TimeFirstText = 1.5f;
+    public float TimeSecText = 1.5f;
     private bool Nod;
     private bool shake;
     private int Count_Yes = 0;
@@ -34,8 +34,11 @@ public class NPCDialogue : MonoBehaviour {
                 if (Count_Yes >= 2)
                     textCanvas.text = "Wow!, I would like to visit there. Good Luck!";
 
-                    if (Count_Yes >= 3)
-                         textCanvas.text = "Good Luck!";
+            if (Count_Yes >= 3)
+            {
+                textCanvas.text = "Good Luck!";
+                gameObject.SetActive(false);
+            }
 
         }
 
